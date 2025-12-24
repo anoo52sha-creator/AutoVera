@@ -1,5 +1,27 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Result from "./pages/Result";
+import Pricing from "./pages/Pricing";
 
 export default function App() {
-  return <Home />;
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-[#020617] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.15),transparent_60%)]" />
+
+        <div className="relative z-10">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/result" element={<Result />} />
+            <Route path="/pricing" element={<Pricing />} />
+            
+          </Routes>
+          <Footer />
+        </div>
+      </div>
+    </BrowserRouter>
+  );
 }

@@ -53,59 +53,93 @@
 //     </section>
 //   );
 // }
-import { motion } from "framer-motion";
-import heroBg from "../assets/hero-bg.png";
+// import { motion } from "framer-motion";
+// import heroBg from "../assets/hero-bg.png";
 
 
-export default function Hero() {
+// export default function Hero() {
+//   return (
+//     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+
+//       {/* Background Image */}
+//       <img
+//         src={heroBg}
+//         alt="Vehicle verification technology"
+//         className="absolute inset-0 w-full h-full object-cover"
+//       />
+
+//       {/* Dark + Blue Overlay */}
+//       <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/90 via-[#020617]/80 to-[#020617]"></div>
+
+//       {/* Blue Glow */}
+//       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/20 blur-[140px] rounded-full"></div>
+
+//       {/* Content */}
+//       <div className="relative z-10 text-center px-6 max-w-3xl">
+
+//         <motion.h2
+//           initial={{ opacity: 0, y: 40 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="text-4xl md:text-6xl font-extrabold leading-tight"
+//         >
+//           Know Your Car.
+//           <span className="text-blue-400"> Instantly.</span>
+//         </motion.h2>
+
+//         <motion.p
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ delay: 0.3 }}
+//           className="mt-6 text-gray-300 text-lg"
+//         >
+//           Instantly access vehicle history, RC verification,
+//           ownership details and fraud checks — before you buy.
+//         </motion.p>
+
+//         <motion.button
+//           whileHover={{ scale: 1.05 }}
+//           whileTap={{ scale: 0.95 }}
+//           className="mt-10 px-10 py-4 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-semibold shadow-lg shadow-blue-500/30 transition"
+//         >
+//           Check Vehicle Now
+//         </motion.button>
+
+//       </div>
+//     </section>
+//   );
+// }
+export default function Home() {
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <section
+      className="py-24 px-6 text-center min-h-screen flex flex-col justify-center"
+      style={{
+        backgroundImage: `
+          linear-gradient(
+            to bottom,
+            rgba(2,6,23,0.65),
+            rgba(2,6,23,0.9)
+          ),
+          url('/hero-bg-blue.png')
+        `,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* CONTENT */}
+      <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+        <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+          Auto Vera
+        </span>
+        <br />
+        Smart Vehicle Intelligence
+      </h1>
 
-      {/* Background Image */}
-      <img
-        src={heroBg}
-        alt="Vehicle verification technology"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-
-      {/* Dark + Blue Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/90 via-[#020617]/80 to-[#020617]"></div>
-
-      {/* Blue Glow */}
-      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/20 blur-[140px] rounded-full"></div>
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-3xl">
-
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-extrabold leading-tight"
-        >
-          Know Your Car.
-          <span className="text-blue-400"> Instantly.</span>
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-6 text-gray-300 text-lg"
-        >
-          Instantly access vehicle history, RC verification,
-          ownership details and fraud checks — before you buy.
-        </motion.p>
-
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-10 px-10 py-4 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-semibold shadow-lg shadow-blue-500/30 transition"
-        >
-          Check Vehicle Now
-        </motion.button>
-
-      </div>
+      <p className="mt-6 text-lg text-gray-300 max-w-xl mx-auto">
+        Verify any vehicle instantly using number or VIN.
+      </p>
     </section>
   );
 }
+
