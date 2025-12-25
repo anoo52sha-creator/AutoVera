@@ -4,7 +4,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Result from "./pages/Result";
 import Pricing from "./pages/Pricing";
-
+import BookingForm from "./pages/BookingForm";
+import ThankYou from "./pages/ThankYou";
 export default function App() {
   return (
     <BrowserRouter>
@@ -17,7 +18,9 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/result" element={<Result />} />
             <Route path="/pricing" element={<Pricing />} />
-            
+            <Route path="/book-inspection" element={<BookingForm />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+
           </Routes>
           <Footer />
         </div>
