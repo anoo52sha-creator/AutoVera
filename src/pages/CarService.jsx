@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 export default function CarService() {
   return (
     <>
@@ -136,7 +139,7 @@ export default function CarService() {
 
     {/* CTA */}
     <div className="text-center mt-20">
-      <a
+      {/* <a
         href="/book-inspection"
         className="inline-block px-12 py-4 rounded-xl 
                    bg-blue-600 text-white font-semibold text-lg
@@ -144,7 +147,17 @@ export default function CarService() {
                    shadow-[0_0_40px_rgba(59,130,246,0.6)]"
       >
         Book Mobile Car Service
-      </a>
+      </a> */}
+      <Link
+        to="/book-inspection"
+        className="inline-block px-12 py-4 rounded-xl 
+                   bg-blue-600 text-white font-semibold text-lg
+                   hover:bg-blue-500 transition 
+                   shadow-[0_0_40px_rgba(59,130,246,0.6)"
+      >
+        Book Mobile Car Service
+      </Link>
+
       <p className="mt-5 text-gray-400">
         Call us anytime:{" "}
         <span className="font-semibold text-blue-400">800-24325</span>
@@ -165,7 +178,7 @@ export default function CarService() {
       </h2>
 
       <p className="mt-6 text-gray-400 leading-relaxed">
-        At CheckAnyCar, we know that convenience matters just as much as quality
+        At AutoVera, we know that convenience matters just as much as quality
         when it comes to car care. That’s why our{" "}
         <span className="text-blue-400 font-medium">
           home car service Dubai
@@ -189,13 +202,18 @@ export default function CarService() {
         With CheckAnyCar, your car gets expert attention at your doorstep, and
         you get to carry on with your day uninterrupted.
       </p>
-
-      <button 
+      <br></br>
+      {/* <button 
           onClick={() => window.location.href = "/contact"}
           className="mt-8 px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold shadow-lg">
           Contact Us
-      </button>
-      
+      </button> */}
+      <Link
+        to="/contact"
+        className="mt-8 px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold shadow-lg"
+      >
+       Contact Us
+      </Link>
     </div>
 
     {/* RIGHT IMAGE */}
@@ -300,12 +318,20 @@ export default function CarService() {
         ))}
       </ul>
 
-      <button 
+      {/* <button 
       onClick={() => window.location.href = "/book-inspection"}
       className="mt-8 px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold shadow-lg">
         Book Inspection Now
-      </button>
-     
+      </button> */}
+      <br></br>
+      <br>
+      </br>
+     <Link
+      to="/book-inspection"
+      className="mt-8 px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold shadow-lg"
+    >
+      Book Inspection Now
+    </Link>
       <p className="mt-4 text-sm text-gray-400">
         ⭐⭐⭐⭐⭐ 5.0 Rated Mobile Car Service in Dubai
       </p>
